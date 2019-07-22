@@ -18,7 +18,7 @@ requirements:
     - python
     - pip
   run:
-    - python
+    - python >=3
     - gitdb2
 
 test:
