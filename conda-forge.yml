@@ -6,4 +6,7 @@ appveyor:
     BINSTAR_TOKEN: tumuXLL8PU75WMnRDemRy02ruEq2RpNxeK3dz0MjFssnosPm2v4EFjfNB4PTotA1
 bot:
   automerge: true
+<<<<<<< HEAD
 conda_forge_output_validation: true
+=======
+>>>>>>> [ci skip] ***NO_CI*** added bot automerge
