@@ -2,6 +2,7 @@
 
 package:
   name: gitpython
+  # Versions 3.1.4, 3.1.15, 3.1.16, 3.1.17 have been yanked
   version: {{ version }}
 
 source:
@@ -17,6 +18,8 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - setuptools
+    - wheel
   run:
     - python >=3.5
     - gitdb >=4.0.1,<5
@@ -43,6 +46,7 @@ about:
   license_file: LICENSE
   summary: Python Git Library
   doc_url: http://gitpython.readthedocs.org
+  dev_url: https://github.com/gitpython-developers/GitPython
 
 extra:
   recipe-maintainers:
