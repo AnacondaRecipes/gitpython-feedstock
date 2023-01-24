@@ -10,8 +10,8 @@ source:
   sha256: 769c2d83e13f5d938b7688479da374c4e3d49f71549aaf462b646db9602ea6f8
 
 build:
-  number: 1
-  noarch: python
+  number: 0
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - setuptools
     - wheel
   run:
-    - python >=3.5
+    - python
     - gitdb >=4.0.1,<5
     - typing-extensions >=3.7.4.0
 
