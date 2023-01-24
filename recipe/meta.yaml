@@ -1,4 +1,4 @@
-{% set version = "3.1.18" %}
+{% set version = "3.1.30" %}
 
 package:
   name: gitpython
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/G/GitPython/GitPython-{{ version }}.tar.gz
-  sha256: b838a895977b45ab6f0cc926a9045c8d1c44e2b653c1fcc39fe91f42c6e8f05b
+  sha256: 769c2d83e13f5d938b7688479da374c4e3d49f71549aaf462b646db9602ea6f8
 
 build:
   number: 1
