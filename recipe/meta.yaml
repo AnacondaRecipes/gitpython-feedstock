@@ -51,7 +51,7 @@ about:
     It provides abstractions of git objects for easy access of repository data, and additionally allows you to access the git repository more directly using either a pure python implementation, or the faster, but more resource intensive git command implementation.
 
     The object database implementation is optimized for handling large quantities of objects and large datasets, which is achieved by using low-level structures and data streaming.
-  doc_url: http://gitpython.readthedocs.org
+  doc_url: https://gitpython.readthedocs.io
   dev_url: https://github.com/gitpython-developers/GitPython
 
 extra:
