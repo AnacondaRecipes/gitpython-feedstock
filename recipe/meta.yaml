@@ -23,7 +23,7 @@ requirements:
   run:
     - python
     - gitdb >=4.0.1,<5
-    - typing-extensions >=3.7.4.0  # [py<38]
+    - typing-extensions >=3.7.4.3  # [py<38]
 
 test:
   requires:
