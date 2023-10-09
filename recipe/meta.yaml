@@ -2,7 +2,7 @@
 
 package:
   name: gitpython
-  # Versions 3.1.4, 3.1.15, 3.1.16, 3.1.17 have been yanked
+  # Versions 3.1.4, 3.1.15-17, 3.1.19-23 have been yanked
   version: {{ version }}
 
 source:
