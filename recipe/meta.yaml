@@ -6,12 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-    sha256: 85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c
-  - url: https://github.com/{{ name|lower }}-developers/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
-    sha256: 67a52b150bf206612fefa478e6e5d5a31a3a379cd346577a386194878b9f8762
-    folder: gh
-
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+  sha256: 85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c
+  
 build:
   number: 0
   skip: true  # [py<37]
