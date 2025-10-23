@@ -1,12 +1,16 @@
+{% set name = "GitPython" %}
 {% set version = "3.1.45" %}
 
 package:
-  name: gitpython
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/G/GitPython/gitpython-3.1.45.tar.gz
-  sha256: 85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
+    sha256: 85b0ee964ceddf211c41b9f27a49086010a190fd8132a24e21f362a4b36a791c
+  - url: https://github.com/{{ name|lower }}-developers/{{ name }}/archive/refs/tags/{{ version }}.tar.gz
+    sha256: 67a52b150bf206612fefa478e6e5d5a31a3a379cd346577a386194878b9f8762
+    folder: gh
 
 build:
   number: 0
@@ -15,19 +19,18 @@ build:
 
 requirements:
   host:
-    - python
     - pip
+    - python
     - setuptools
+    - wheel
   run:
     - python
     - gitdb >=4.0.1,<5
-    - typing-extensions >=3.7.4.3  # [py<38]
     - typing_extensions >=3.10.0.2  # [py<310]
 
+# Upstream tests are meaningless as they are operate on the original repository branch
+# Which is not initialized in the tarball
 test:
-  requires:
-    - git
-    - pip
   imports:
     - git
     - git.index
@@ -35,6 +38,8 @@ test:
     - git.objects.submodule
     - git.refs
     - git.repo
+  requires:
+    - pip
   commands:
     - pip check
 
