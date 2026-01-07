@@ -37,6 +37,8 @@ test:
     - git.repo
   requires:
     - pip
+    # Fix "ImportError: Bad git executable." for Windows
+    - git # [win]
   commands:
     - pip check
 
