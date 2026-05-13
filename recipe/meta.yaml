@@ -1,15 +1,13 @@
 {% set name = "GitPython" %}
-{% set version = "3.1.47" %}
+{% set version = "3.1.50" %}
 
-# Upstream tests are meaningless as they are operate on the original repository branch
-# Which is not initialized in the tarball
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|lower }}-{{ version }}.tar.gz
-  sha256: dba27f922bd2b42cb54c87a8ab3cb6beb6bf07f3d564e21ac848913a05a8a3cd
+  sha256: 80da2d12504d52e1f998772dc5baf6e553f8d2fcfe1fcc226c9d9a2ee3372dcc
 
 build:
   number: 0
@@ -26,6 +24,8 @@ requirements:
     - gitdb >=4.0.1,<5
     - typing_extensions >=3.10.0.2  # [py<310]
 
+# Upstream tests are meaningless as they are operate on the original repository branch
+# Which is not initialized in the tarball
 test:
   imports:
     - git
