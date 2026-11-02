@@ -24,8 +24,10 @@ requirements:
     - gitdb >=4.0.1,<5
     - typing_extensions >=3.10.0.2  # [py<310]
 
-# Upstream tests are meaningless as they are operate on the original repository branch
-# Which is not initialized in the tarball
+# Upstream tests are not enabled: they need a full git clone with a `master` branch
+# (GitPython tests use the repo history and branch), the PyPI sdist has no tests,
+# and the GitHub tag tarball has no .git. They also need extra test deps `ddt`
+# which is not a part of `main` and import the source tree instead of the installed package.
 test:
   imports:
     - git
